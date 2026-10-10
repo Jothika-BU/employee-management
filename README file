@@ -1,0 +1,38 @@
+# Employee Management API
+
+## Overview
+A backend REST API built using Python, FastAPI, and MySQL to create and retrieve employee records.
+
+## Features
+- Create employee records using POST.
+- Retrieve employee records using GET.
+- Validate employee input using Pydantic.
+- Reject duplicate email addresses.
+- Store database configuration in environment variables.
+- Handle database errors safely.
+- Persist employee records in MySQL.
+
+## Technologies
+- Python
+- FastAPI
+- MySQL
+- Pydantic
+- python-dotenv
+
+## Setup
+1. Install dependencies:
+   `pip install -r requirements.txt`
+2. Create the MySQL database and employees table.
+3. Configure the database credentials in a local `.env` file.
+4. Start the API:
+   `python -m uvicorn main:app --reload`
+5. Open `http://127.0.0.1:8000/docs` to test the endpoints.
+
+## API Endpoints
+- `GET /` — Check API status.
+- `GET /test-db` — Test database connectivity.
+- `GET /employees` — Retrieve employee records.
+- `POST /employees` — Create an employee record.
+
+## Notes
+The database credentials are stored locally in `.env`. Do not upload that file to a public repository.
